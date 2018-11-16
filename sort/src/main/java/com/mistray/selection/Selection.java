@@ -8,6 +8,12 @@ import com.mistray.model.SortModel;
  * @desc 选择排序
  *
  * 逻辑:遍历数组,找到最小的值放在最左边
+ * 时间复杂度
+ * 平均情况:O(n^2)
+ * 最好情况:O(n^2)
+ * 最坏情况:O(n^2)
+ * 空间复杂度:O*(1)
+ * 稳定性:不稳定
  */
 public class Selection {
 

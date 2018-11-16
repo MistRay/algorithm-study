@@ -31,9 +31,9 @@
         </dependency>
 
         <dependency>
-            <groupId>com.peterphi.std</groupId>
-            <artifactId>stdlib</artifactId>
-            <version>10.1.2</version>
+            <groupId>edu.princeton.cs</groupId>
+            <artifactId>algs4</artifactId>
+            <version>1.0.3</version>
         </dependency>
 
     </dependencies>

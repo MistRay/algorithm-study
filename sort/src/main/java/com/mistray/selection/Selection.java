@@ -3,7 +3,7 @@ package com.mistray.selection;
 import com.mistray.model.SortModel;
 
 /**
- * @author MistLight
+ * @author MistRay
  * @create 2018-11-16
  * @desc 选择排序
  *

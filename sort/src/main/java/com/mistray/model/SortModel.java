@@ -3,7 +3,7 @@ package com.mistray.model;
 import edu.princeton.cs.algs4.StdOut;
 
 /**
- * @author MistLight
+ * @author MistRay
  * @create 2018-11-16
  * @desc 排序算法模版
  */

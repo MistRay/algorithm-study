@@ -3,7 +3,7 @@ package com.mistray.insertion;
 import com.mistray.model.SortModel;
 
 /**
- * @author MistLight
+ * @author MistRay
  * @create 2018-11-16
  * @desc 插入排序
  * 时间复杂度:

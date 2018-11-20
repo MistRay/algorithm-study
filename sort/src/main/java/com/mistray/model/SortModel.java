@@ -9,6 +9,14 @@ import edu.princeton.cs.algs4.StdOut;
  */
 public class SortModel {
 
+    /**
+     *
+     * @param v
+     * @param w
+     * @return
+     * true  v < m
+     * false v > m
+     */
     public static boolean less(Comparable v, Comparable w) {
         return v.compareTo(w) < 0;
     }

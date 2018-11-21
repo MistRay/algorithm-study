@@ -2,6 +2,8 @@ package com.mistray.swapsort;
 
 import com.mistray.model.SortModel;
 
+import java.util.Random;
+
 /**
  * @author MistLight
  * @create 2018-11-19
@@ -21,7 +23,12 @@ import com.mistray.model.SortModel;
  */
 public class QuickSort {
     public static void main(String[] args) {
-        Integer[] arr = {8, 34, 5, 92, 44, 2, 74, 12};
+        Integer[] arr = new Integer[8];
+        Random random = new Random();
+        for (int i = 0; i < 8; i++) {
+            arr[i] = random.nextInt(150);
+        }
+        SortModel.show(arr);
         QuickSort.quickSort(arr, 0, arr.length - 1);
         SortModel.show(arr);
     }
@@ -40,28 +47,35 @@ public class QuickSort {
         }
     }
 
+
+    /**
+     * 根据基准数分治
+     *
+     * @param arr
+     * @param start
+     * @param end
+     * @return
+     */
     private static int partition(Integer[] arr, Integer start, Integer end) {
-        //arr[start]为挖的第一个坑arr[start]为8
+        // 将key作为基准数
         int key = arr[start];
         while (start < end) {
-            // 从arr[end]开始向前找一个比arr[start]小或相等的数填到arr[end]小的数(arr[5])填到arr[start]的位置
+            // 找到比key大的
             while (arr[end] >= key && end > start) {
                 end--;
             }
-            // 逆向查找找到[5]
+            // 把key值放入arr[start]
             arr[start] = arr[end];
-            // {2,34,5,92,44,2,74,12}
             SortModel.show(arr);
-            // 这时又出现了一个新坑(arr[5]),从arr[start]开始向后找一个比arr[5]大的数(arr[1])填到arr[5]的位置
             while (arr[start] <= key && end > start) {
                 start++;
             }
-            // 正向查找找到[1]
+            // 把arr[start] 放入 arr[end]
             arr[end] = arr[start];
             SortModel.show(arr);
-            // 所以会再次进入循环找[1]与[5]未确认的部分,直到start<end为止,将k填进对应的位置
         }
         arr[start] = key;
+        SortModel.show(arr);
         return start;
     }
 

@@ -1,7 +1,7 @@
 package com.mistray.merge;
 
 /**
- * @author MistLight
+ * @author MistRay
  * @create 2018-11-20
  * @desc 归并排序
  */

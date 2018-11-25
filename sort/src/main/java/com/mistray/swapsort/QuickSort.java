@@ -1,11 +1,10 @@
 package com.mistray.swapsort;
-
 import com.mistray.model.SortModel;
 
 import java.util.Random;
 
 /**
- * @author MistLight
+ * @author MistRay
  * @create 2018-11-19
  * @desc 快速排序->分治算法
  * 逻辑:
@@ -13,7 +12,7 @@ import java.util.Random;
  * 2.j--由后向前找比它小的数,找到后挖出此数填前一个坑a[i]中
  * 3.i++由前向后找比它大的数,找到后也挖出此数填到前一个坑a[j]中
  * 4.再重复执行2,3二步,直到i==j,将基准数填入a[i]中
- *
+ * <p>
  * 时间复杂度:
  * 平均情况:O(nlog2n)
  * 最好情况:O(nlog2n)

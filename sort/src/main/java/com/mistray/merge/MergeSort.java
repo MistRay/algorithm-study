@@ -6,17 +6,22 @@ import java.util.Arrays;
  * @author MistRay
  * @create 2018-11-20
  * @desc 归并排序
+ * 第一步：申请空间，使其大小为两个已经排序序列之和，该空间用来存放合并后的序列
+ * 第二步：设定两个指针，最初位置分别为两个已经排序序列的起始位置
+ * 第三步：比较两个指针所指向的元素，选择相对小的元素放入到合并空间，并移动指针到下一位置
+ * 重复步骤3直到某一指针超出序列尾
+ * 将另一序列剩下的所有元素直接复制到合并序列尾
  */
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] array = { 35, 24, 86, 12, 95, 58, 35, 42, 21, 73 };
+        int[] array = {35, 24, 86, 12, 95, 58, 35, 42, 21, 73};
         sort(array, 0, array.length - 1);
         System.out.println(Arrays.toString(array));
     }
 
-    public static void sort(int[] array, int start, int end){
-        if (start >= end){
+    public static void sort(int[] array, int start, int end) {
+        if (start >= end) {
             return;
         }
 

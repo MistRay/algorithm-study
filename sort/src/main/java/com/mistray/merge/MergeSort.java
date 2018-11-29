@@ -1,5 +1,7 @@
 package com.mistray.merge;
 
+import com.mistray.model.SortModel;
+
 import java.util.Arrays;
 
 /**
@@ -15,12 +17,12 @@ import java.util.Arrays;
 public class MergeSort {
 
     public static void main(String[] args) {
-        int[] array = {35, 24, 86, 12, 95, 58, 35, 42, 21, 73};
+        Integer[] array = {35, 24, 86, 12, 95, 58, 35, 42, 21, 73};
         sort(array, 0, array.length - 1);
         System.out.println(Arrays.toString(array));
     }
 
-    public static void sort(int[] array, int start, int end) {
+    public static void sort(Integer[] array, Integer start, Integer end) {
         if (start >= end) {
             return;
         }
@@ -33,9 +35,11 @@ public class MergeSort {
     }
 
     // 将两个有序序列归并为一个有序序列(二路归并)
-    private static void mergerSort(int[] array, int start, int mid, int end) {
-        int[] arr = new int[end + 1]; // 定义一个临时数组，用来存储排序后的结果
-        int low = start; // 临时数组的索引
+    private static void mergerSort(Integer[] array, Integer start, Integer mid, Integer end) {
+        // 定义一个临时数组，用来存储排序后的结果
+        int[] arr = new int[end + 1];
+        // 临时数组的索引
+        int low = start;
         int left = start;
 
         int center = mid + 1;
@@ -43,16 +47,18 @@ public class MergeSort {
         while (start <= mid && center <= end) {
             arr[low++] = array[start] > array[center] ? array[center++] : array[start++];
         }
+        SortModel.show(array);
 
         // 若还有段序列不为空，则将其加入临时数组末尾
-
         while (start <= mid) {
             arr[low++] = array[start++];
         }
+        SortModel.show(array);
+
         while (center <= end) {
             arr[low++] = array[center++];
         }
-
+        SortModel.show(array);
         // 将临时数组中的值copy到原数组中
         for (int i = left; i <= end; i++) {
             array[i] = arr[i];

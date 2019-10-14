@@ -10,6 +10,7 @@
     <modules>
         <module>sort</module>
         <module>sort</module>
+        <module>lru</module>
     </modules>
     <name>algorithm-study</name>
     <packaging>pom</packaging>

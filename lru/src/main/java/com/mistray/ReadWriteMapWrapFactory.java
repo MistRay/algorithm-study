@@ -20,6 +20,7 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  * @Package com.mistray
  * @create 2019年10月14日 20:24
  * @Desc 读写锁
+ * 逻辑: 给map加读写锁.读时加读锁,写时加写锁.
  */
 public class ReadWriteMapWrapFactory {
 

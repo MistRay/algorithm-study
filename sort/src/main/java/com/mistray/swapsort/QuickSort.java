@@ -58,22 +58,27 @@ public class QuickSort {
     private static int partition(Integer[] arr, Integer start, Integer end) {
         // 将key作为基准数
         int key = arr[start];
+        // 从尾向头找,大于key的元素不动,将小于key的值与key替换位置
+        // 再从头向尾找,小于key的元素不动,将大于key的值与上面找到的arr[end]替换位置
+        // 直到索引号相同,说明数组中元素全部被检索一遍,key左边的都是比key小的,key右边都是比key大的.
         while (start < end) {
-            // 找到比key大的
+            SortModel.show(arr);
+            // 从尾向头找,找到比key小的就结束
             while (arr[end] >= key && end > start) {
                 end--;
             }
-            // 把key值放入arr[start]
+            // 把上面找到的比key小的值放入arr[start]
             arr[start] = arr[end];
-            SortModel.show(arr);
+            // 从头向尾找,找到比key大的就结束
             while (arr[start] <= key && end > start) {
                 start++;
             }
-            // 把arr[start] 放入 arr[end]
+            // 把上面找到的比key大的值放入 arr[end]
             arr[end] = arr[start];
             SortModel.show(arr);
         }
-        arr[start] = key;
+        // 最终end=start,说明了整个数组已经被扫描了一遍
+        arr[end] = key;
         SortModel.show(arr);
         return start;
     }

@@ -11,6 +11,7 @@
         <module>sort</module>
         <module>sort</module>
         <module>lru</module>
+        <module>tree</module>
     </modules>
     <name>algorithm-study</name>
     <packaging>pom</packaging>

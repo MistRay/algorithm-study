@@ -138,6 +138,14 @@ public class BST<Key extends Comparable<Key>, Value> {
             return x;
         }
     }
+    public static void main(String[] args) {
+        BST<Integer, Integer> bst = new BST<Integer, Integer>();
+        bst.put(1, 2);
+        bst.put(2, 1);
+        bst.put(3, 2);
+        bst.put(4, 2);
+        System.out.println(bst);
 
+    }
 
 }

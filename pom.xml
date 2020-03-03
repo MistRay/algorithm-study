@@ -13,6 +13,7 @@
         <module>lru</module>
         <module>tree</module>
         <module>skip</module>
+        <module>leetcode</module>
     </modules>
     <name>algorithm-study</name>
     <packaging>pom</packaging>

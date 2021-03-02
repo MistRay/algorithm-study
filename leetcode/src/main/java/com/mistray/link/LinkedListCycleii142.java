@@ -12,6 +12,10 @@ public class LinkedListCycleii142 {
 
     }
 
+    // 思路 :
+    // 快慢指针
+    // 快指针一次走两格,慢指针一次走一格
+    // 如果相遇,说明有环
     public ListNode detectCycle(ListNode head) {
         ListNode slow = head, fast = head;
         while (fast.next != null && fast.next.next != null) {

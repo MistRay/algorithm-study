@@ -10,9 +10,16 @@ import java.util.Stack;
  * @Package com.mistray.tree
  * @create 2020年03月06日 14:47
  * @Desc
+ * 给定一个二叉树，返回它的 后序 遍历。
+ * 前序: 根左右
+ * 中序: 左根右
+ * 后序: 左右根
  */
 public class BinaryTreePostorderTraversal145 {
     public List<Integer> postorderTraversal(TreeNode root) {
+        if (root == null){
+            return new ArrayList<>();
+        }
         List<Integer> list = new ArrayList<>();
         Stack<TreeNode> stack1 = new Stack<>();
         Stack<TreeNode> stack2 = new Stack<>();

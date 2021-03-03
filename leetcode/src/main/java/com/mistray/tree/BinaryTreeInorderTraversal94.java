@@ -11,6 +11,9 @@ import java.util.Stack;
  * @create 2020年03月06日 13:54
  * @Desc
  * 给定一个二叉树的根节点 root ，返回它的 中序 遍历。
+ * 前序: 根左右
+ * 中序: 左根右
+ * 后序: 左右根
  */
 public class BinaryTreeInorderTraversal94 {
 
